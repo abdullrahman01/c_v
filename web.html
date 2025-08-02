@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>web-design</title>
+</head>
+<body>
+       <header class="header">
+<a href="#" class="logo">Portfolio</a>
+<i class='bx bx-menu' id="menu-icon"></i>
+<nav class="navbar">
+    <ul>
+        <a href="index.html" class="item" >home</a>
+        <a class="item active" href="web.html">Library</a>
+   
+    </ul>
+
+</nav>
+    </header>
+    <div class="logos">
+        <img src="web/page1.jpg" alt="" srcset="">
+        <img src="web/page2.jpg" alt="" srcset="">
+        <img src="web/page3.jpg" alt="" srcset="">
+        <img src="web/page4.jpg" alt="" srcset="">
+        <img src="web/page5.jpg" alt="" srcset="">
+        <img src="web/page6.jpg" alt="" srcset="">
+        <img src="web/page7.jpg" alt="" srcset="">
+        <img src="web/page8.jpg" alt="" srcset="">
+        <img src="web/page9.jpg" alt="" srcset="">
+        <img src="web/page10.jpg" alt="" srcset="">
+
+    </div>
+    <div>
+                <section class="contact" id="contact">
+            <h2 class="heading">Contact <span>Me!</span></h2>
+            <form  id="whatsapp-form" >
+                <div class="input-contact">
+<input type="text" name="fullname" id="fullname" autocomplete="name" placeholder="Enter your Name">
+                </div>
+                <div class="input-contact">
+<input type="email" name="email" id="email" autocomplete="email" placeholder="Enter your Email">
+                </div>
+                        <div class="input-contact">
+<input type="number" name="mobile" id="mobile" autocomplete="tel" placeholder="Enter Your number">
+                </div>
+                <textarea name="" id="your-message" cols="30" rows="10" placeholder="your message" autocomplete="message"></textarea>
+                <input type="submit" value="send message" class="btn" id="send-message">
+            </form>
+        </section>
+        <script src="script.js"></script>
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("whatsapp-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // قراءة القيم من الحقول
+    var name = document.getElementById("fullname").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var mobile = document.getElementById("mobile").value.trim();
+    var message = document.getElementById("your-message").value.trim();
+
+    // تحقق أن المستخدم كتب رسالة
+    if (!name || !email || !message) {
+      alert("من فضلك املأ الاسم والإيميل والرسالة.");
+      return;
+    }
+
+    // إنشاء نص الرسالة
+    var text = `👤 name: ${name}%0A📧 email: ${email}%0A📱 mobile: ${mobile}%0A📝 message: ${message}`;
+
+    // رقمك على واتساب بصيغة دولية (بدون +)
+    var phoneNumber = "201013737586";
+
+    // فتح رابط واتساب
+    var whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
+    window.open(whatsappURL, '_blank');
+  });
+});
+</script>
+
+    </div>
+</body>
+</html>

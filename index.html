@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Portfolio</title>
+</head>
+<body>
+    <header class="header">
+<a href="index.html" class="logo">Portfolio</a>
+<i class='bx bx-menu' id="menu-icon"></i>
+<nav class="navbar">
+    <ul>
+        <a href="#home" class="item active" >home</a>
+        <a class="item" href="#about">about</a>
+        <a class="item" href="#service">service</a>
+        <a class="item" href="#portfolio">Portfolio</a>
+        <a class="item" href="#contact">contact</a>
+    </ul>
+
+</nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello It,s Me</h3>
+            <h1>Abdullrahman Mousa</h1>
+            <h3>And I'M <span>Front End Developer</span> </h3>
+            <p> Html,Javascript,css(Tailwind,vue)</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/share/16jT48zu53/"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/abd0_m0usa?igsh=MWN0dW02YnprNW9wYQ=="><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/in/abdullrahman-mousa-929445343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://wa.me/201013737586"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+        </div>
+        <div class="home-img">
+<img src="img/WhatsApp-Image-2024-12-23-at-1.11.00-PM.png" alt="loading">
+        </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="img/WhatsApp-Image-2024-12-23-at-1.11.00-PM.png" alt="" srcset="">
+            </div>
+            <div class="about-content">
+                <h2 class="heading">About <span>Me</span></h2>
+                <h3>Front-End Developer</h3>
+                <p>I,m a passionate Front-End Developer and Graphic Designer with experience in building responsive websites and creative visual content . I specialize in Html ,css ,Javascript,and modern ui frameworks. I also design professional logos and Graphic that bring ideas to life. in addition,i have strong marketing skills that help deliver effective and engaging digital experiences.</p>
+                <a href="#service" class="btn">Read More</a>
+            </div>
+        </section>
+        <section class="services" id="service">
+            <h2 class="heading">Our <span>Services</span></h2>
+            <div class="service-container">
+                <div class="service-box">
+                    <i class='bx  bx-brush'  ></i>                     <h3>Graphic Design</h3>
+                    <p>crafting logos that reflect brand identity. <br>blending aesthetics with functionality in every Project</p>
+                <a href="#portfolio" class="btn">read more</a> 
+            </div>
+            <div class="service-box" >
+                <i class='bx  bx-code-alt'  ></i>
+                <h3>Web Development</h3>
+                <p>Building responsive and user-friendly websites <br>writing clean,efficient,and maintainable code.
+                </p>
+            <a href="#portfolio" class="btn">read more</a> 
+        </div>
+        <div class="service-box">
+            <i class='bx  bx-bar-chart'  ></i>                          <h3>Digital Marketing</h3>
+            <p>creating targeted marketing strategies for online platforms <br>crafting compelling content</p>
+        <a href="#portfolio" class="btn">Read More</a> 
+    </div>
+            </div>
+        </section>
+        <section class="portfolio" id="portfolio">
+            <h2 class="heading">Latest <span>Project</span></h2>
+          
+            <div class="portfolio-container">
+              <!-- المشروع 1 -->
+              <div class="portfolio-box">
+                <img src="img/portfolio2.jpg" alt="">
+                <div class="portfolio-layer">
+                  <h4>logo Design</h4>
+                  <p>Profissional in Graphic & Wep Design</p>
+                  <a href="graphic.html"><i class='bx bx-link'></i></a>
+                </div>
+              </div>
+          
+              <!-- المشروع 2 -->
+              <div class="portfolio-box">
+                <img src="img/portfolio3.jpg" alt="">
+                <div class="portfolio-layer">
+                  <h4>Web Design</h4>
+                  <p>Specialize in Graphic Design</p>
+                  <a href="web.html"><i class='bx bx-link'></i></a>
+                </div>
+              </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <h2 class="heading">Contact <span>Me!</span></h2>
+            <form  id="whatsapp-form" >
+                <div class="input-contact">
+<input type="text" name="fullname" id="fullname" autocomplete="name" placeholder="Enter your Name">
+                </div>
+                <div class="input-contact">
+<input type="email" name="email" id="email" autocomplete="email" placeholder="Enter your Email">
+                </div>
+                        <div class="input-contact">
+<input type="number" name="mobile" id="mobile" autocomplete="tel" placeholder="Enter Your number">
+                </div>
+                <textarea name="" id="your-message" cols="30" rows="10" placeholder="your message" autocomplete="message"></textarea>
+                <input type="submit" value="send message" class="btn" id="send-message">
+            </form>
+        </section>
+        <script src="script.js"></script>
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("whatsapp-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // قراءة القيم من الحقول
+    var name = document.getElementById("fullname").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var mobile = document.getElementById("mobile").value.trim();
+    var message = document.getElementById("your-message").value.trim();
+
+    // تحقق أن المستخدم كتب رسالة
+    if (!name || !email || !message) {
+      alert("من فضلك املأ الاسم والإيميل والرسالة.");
+      return;
+    }
+
+    // إنشاء نص الرسالة
+    var text = `👤 name: ${name}%0A📧 email: ${email}%0A📱 mobile: ${mobile}%0A📝 message: ${message}`;
+
+    // رقمك على واتساب بصيغة دولية (بدون +)
+    var phoneNumber = "201013737586";
+
+    // فتح رابط واتساب
+    var whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
+    window.open(whatsappURL, '_blank');
+  });
+});
+</script>
+
+    <script>
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".navbar a.item");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href").substring(1) === entry.target.id) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  }, {
+    threshold: 0.6
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+    </body>
+    </html>
