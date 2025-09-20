@@ -204,6 +204,7 @@ font-size: 4.5rem;}
     }
     .service-box:hover{
         border-color: var(--main-color);
+        scale:1.1
     }
     .portfolio{
         background: var(--second-bg-color);
@@ -516,3 +517,4 @@ section{
         width: 35vh;
     }
 }
+
